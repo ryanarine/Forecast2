@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/Forecast2/static/js/main.20379dc7.chunk.js",
-    "main.js.map": "/Forecast2/static/js/main.20379dc7.chunk.js.map",
-    "runtime~main.js": "/Forecast2/static/js/runtime~main.24614136.js",
-    "runtime~main.js.map": "/Forecast2/static/js/runtime~main.24614136.js.map",
-    "static/js/2.48e8ad1b.chunk.js": "/Forecast2/static/js/2.48e8ad1b.chunk.js",
-    "static/js/2.48e8ad1b.chunk.js.map": "/Forecast2/static/js/2.48e8ad1b.chunk.js.map",
-    "index.html": "/Forecast2/index.html",
-    "precache-manifest.7fa03537ca8a84601fba31c9f9642cbd.js": "/Forecast2/precache-manifest.7fa03537ca8a84601fba31c9f9642cbd.js",
-    "service-worker.js": "/Forecast2/service-worker.js",
-    "static/media/Clear.jpeg": "/Forecast2/static/media/Clear.122dd7e9.jpeg",
-    "static/media/Drizzle.jpg": "/Forecast2/static/media/Drizzle.eada9e67.jpg",
-    "static/media/Fog.png": "/Forecast2/static/media/Fog.1c9f4f24.png",
-    "static/media/Rainy.png": "/Forecast2/static/media/Rainy.2f78334f.png",
-    "static/media/Snowy.png": "/Forecast2/static/media/Snowy.cad3feb8.png",
-    "static/media/Thunderstorm.jpg": "/Forecast2/static/media/Thunderstorm.45c32976.jpg",
-    "static/media/cloudy.jpg": "/Forecast2/static/media/cloudy.2fb2183f.jpg"
+    "main.js": "/Forecast/static/js/main.2eeb85ed.chunk.js",
+    "main.js.map": "/Forecast/static/js/main.2eeb85ed.chunk.js.map",
+    "runtime~main.js": "/Forecast/static/js/runtime~main.bf801d13.js",
+    "runtime~main.js.map": "/Forecast/static/js/runtime~main.bf801d13.js.map",
+    "static/js/2.48e8ad1b.chunk.js": "/Forecast/static/js/2.48e8ad1b.chunk.js",
+    "static/js/2.48e8ad1b.chunk.js.map": "/Forecast/static/js/2.48e8ad1b.chunk.js.map",
+    "index.html": "/Forecast/index.html",
+    "precache-manifest.1249bf0a9ae340018f83530375d8780c.js": "/Forecast/precache-manifest.1249bf0a9ae340018f83530375d8780c.js",
+    "service-worker.js": "/Forecast/service-worker.js",
+    "static/media/Clear.jpeg": "/Forecast/static/media/Clear.122dd7e9.jpeg",
+    "static/media/Drizzle.jpg": "/Forecast/static/media/Drizzle.eada9e67.jpg",
+    "static/media/Fog.png": "/Forecast/static/media/Fog.1c9f4f24.png",
+    "static/media/Rainy.png": "/Forecast/static/media/Rainy.2f78334f.png",
+    "static/media/Snowy.png": "/Forecast/static/media/Snowy.cad3feb8.png",
+    "static/media/Thunderstorm.jpg": "/Forecast/static/media/Thunderstorm.45c32976.jpg",
+    "static/media/cloudy.jpg": "/Forecast/static/media/cloudy.2fb2183f.jpg"
   }
 }
