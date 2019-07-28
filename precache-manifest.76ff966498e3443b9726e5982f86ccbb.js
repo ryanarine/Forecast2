@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "654a91e062fd00bf2ec070c67233fcfd",
+    "revision": "3cc8589c7708b18d53451cfcfff9ac08",
     "url": "/Forecast2/index.html"
   },
   {
-    "revision": "f708bf2f07267717bc8f",
-    "url": "/Forecast2/static/js/2.6e5ae4b3.chunk.js"
+    "revision": "c2235897fd654076ba36",
+    "url": "/Forecast2/static/js/2.f1d1490f.chunk.js"
   },
   {
-    "revision": "7cac7921e3620df6334b",
-    "url": "/Forecast2/static/js/main.1babfd22.chunk.js"
+    "revision": "9a69cb0e08616fb25ca5",
+    "url": "/Forecast2/static/js/main.3a081b44.chunk.js"
   },
   {
     "revision": "07f8adca5a09990c99b4",
@@ -29,11 +29,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "2f78334f9b22d1bb12d35f626547b3d5",
-    "url": "/Forecast2/static/media/Rainy.2f78334f.PNG"
+    "url": "/Forecast2/static/media/Rainy.2f78334f.png"
   },
   {
     "revision": "cad3feb8807b080fbfbc6a6208fe7757",
-    "url": "/Forecast2/static/media/Snowy.cad3feb8.PNG"
+    "url": "/Forecast2/static/media/Snowy.cad3feb8.png"
   },
   {
     "revision": "45c329761551af170c2114e131da3ffd",
