@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Forecast2/static/js/main.3a081b44.chunk.js",
-    "main.js.map": "/Forecast2/static/js/main.3a081b44.chunk.js.map",
+    "main.js": "/Forecast2/static/js/main.20379dc7.chunk.js",
+    "main.js.map": "/Forecast2/static/js/main.20379dc7.chunk.js.map",
     "runtime~main.js": "/Forecast2/static/js/runtime~main.24614136.js",
     "runtime~main.js.map": "/Forecast2/static/js/runtime~main.24614136.js.map",
-    "static/js/2.f1d1490f.chunk.js": "/Forecast2/static/js/2.f1d1490f.chunk.js",
-    "static/js/2.f1d1490f.chunk.js.map": "/Forecast2/static/js/2.f1d1490f.chunk.js.map",
+    "static/js/2.48e8ad1b.chunk.js": "/Forecast2/static/js/2.48e8ad1b.chunk.js",
+    "static/js/2.48e8ad1b.chunk.js.map": "/Forecast2/static/js/2.48e8ad1b.chunk.js.map",
     "index.html": "/Forecast2/index.html",
-    "precache-manifest.76ff966498e3443b9726e5982f86ccbb.js": "/Forecast2/precache-manifest.76ff966498e3443b9726e5982f86ccbb.js",
+    "precache-manifest.7fa03537ca8a84601fba31c9f9642cbd.js": "/Forecast2/precache-manifest.7fa03537ca8a84601fba31c9f9642cbd.js",
     "service-worker.js": "/Forecast2/service-worker.js",
     "static/media/Clear.jpeg": "/Forecast2/static/media/Clear.122dd7e9.jpeg",
     "static/media/Drizzle.jpg": "/Forecast2/static/media/Drizzle.eada9e67.jpg",
