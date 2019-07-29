@@ -1,0 +1,44 @@
+h1, table, tr, td, th, label{
+	text-align: center;
+	color: white;
+}
+table, tr, td, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 8px;
+	font-family: Arial;
+	text-shadow: 1px 1px #000000, -1px 1px #000000, 1px -1px #000000, -1px -1px #000000;
+	font-weight: 300;
+	font-size: 25px;
+}
+#root {
+	text-align: center;
+}
+body{
+	background-image: url("./sand.jpg");
+	background-color: deepskyblue;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+select, label, input{
+	font-size: 20px;
+}
+select, input{
+	background-color: honeydew;
+	border: 1px solid black;
+	border-radius: 3px;
+	color: black;
+	margin-left: 20px;
+	cursor: pointer;
+}
+button{
+	background-color: dodgerblue;
+	border: 1px solid white;
+	border-radius: 6px;
+	color: white;
+	padding: 15px 20px;
+	text-align: center;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
