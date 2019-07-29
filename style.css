@@ -17,8 +17,8 @@ table, tr, td, th {
 body{
 	background-image: url("./sand.jpg");
 	background-color: deepskyblue;
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background-size: cover;
+	background-repeat: repeat;
 }
 select, label, input{
 	font-size: 20px;
