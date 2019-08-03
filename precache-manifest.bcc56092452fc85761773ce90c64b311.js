@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6ccac2f8e158f0cc854897a76133d606",
+    "revision": "813bb46ec7fb93d079a497d34dc5c2b4",
     "url": "/Forecast/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Forecast/static/js/2.b69b4d30.chunk.js"
   },
   {
-    "revision": "dcfa396f4bc30f530c4f",
-    "url": "/Forecast/static/js/main.e9393e03.chunk.js"
+    "revision": "07f6866ccd1e475298cb",
+    "url": "/Forecast/static/js/main.45404deb.chunk.js"
   },
   {
     "revision": "f32d3b2de39206c3993d",
