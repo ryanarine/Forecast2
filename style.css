@@ -5,6 +5,7 @@ h1, table, tr, td, th, label{
 
 h1 {
 	font-size: calc(20px + 1vw);
+	font-weight: 400;
 }
 
 table, tr, td, th {
@@ -30,6 +31,7 @@ body{
 							 #000000 0px 0px 1px,   #000000 0px 0px 1px,   #000000 0px 0px 1px,
 							 #000000 0px 0px 1px,   #000000 0px 0px 1px,   #000000 0px 0px 1px,
  							 #000000 0px 0px 1px,   #000000 0px 0px 1px,   #000000 0px 0px 1px;
+	font-family: Arial;
 }
 
 select, label, input{
