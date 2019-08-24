@@ -1,6 +1,7 @@
 import React from 'react';
 import WeatherCard from './WeatherCard.js';
 import DayCast from './DayCast.js';
+import './Forecast.css';
 
 
 /* Global variables */
@@ -38,14 +39,6 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 
 
 /* Styles */
-const divStyle = {
-	width: "20%",
-	cursor: "pointer",
-	float: "left"
-};
-const forecastStyle = {
-	minWidth: "1000px"
-};
 const daycastStyle = {
 	minWidth: "500px + 3vh"
 };
@@ -218,14 +211,14 @@ class Forecast extends React.Component {
 		}
 		else {
 			return (
-			<div style = {forecastStyle}>
-			<h1>{ids[this.state.code] + "'s Forecast"}</h1>
 			<div>
-			<div onClick={() => this.dayFocus(0)} style = {divStyle} > <WeatherCard day={this.state.days[0]} high={this.state.highs[0]} low={this.state.lows[0]} condition={this.state.conds[0]}/> </div>
-			<div onClick={() => this.dayFocus(1)} style = {divStyle} > <WeatherCard day={this.state.days[1]} high={this.state.highs[1]} low={this.state.lows[1]} condition={this.state.conds[1]}/> </div>
-			<div onClick={() => this.dayFocus(2)} style = {divStyle} > <WeatherCard day={this.state.days[2]} high={this.state.highs[2]} low={this.state.lows[2]} condition={this.state.conds[2]}/> </div>
-			<div onClick={() => this.dayFocus(3)} style = {divStyle} > <WeatherCard day={this.state.days[3]} high={this.state.highs[3]} low={this.state.lows[3]} condition={this.state.conds[3]}/> </div>
-			<div onClick={() => this.dayFocus(4)} style = {divStyle} > <WeatherCard day={this.state.days[4]} high={this.state.highs[4]} low={this.state.lows[4]} condition={this.state.conds[4]}/> </div>
+			<h1>{ids[this.state.code] + "'s Forecast"}</h1>
+      <div id="cardContainer">
+      <div onClick={() => this.dayFocus(0)} id={"Card1"}> <WeatherCard day={this.state.days[0]} high={this.state.highs[0]} low={this.state.lows[0]} condition={this.state.conds[0]} /> </div>
+			<div onClick={() => this.dayFocus(1)} id={"Card2"}> <WeatherCard day={this.state.days[1]} high={this.state.highs[1]} low={this.state.lows[1]} condition={this.state.conds[1]}/> </div>
+			<div onClick={() => this.dayFocus(2)} id={"Card3"}> <WeatherCard day={this.state.days[2]} high={this.state.highs[2]} low={this.state.lows[2]} condition={this.state.conds[2]}/> </div>
+			<div onClick={() => this.dayFocus(3)} id={"Card4"}> <WeatherCard day={this.state.days[3]} high={this.state.highs[3]} low={this.state.lows[3]} condition={this.state.conds[3]}/> </div>
+			<div onClick={() => this.dayFocus(4)} id={"Card5"}> <WeatherCard day={this.state.days[4]} high={this.state.highs[4]} low={this.state.lows[4]} condition={this.state.conds[4]}/> </div>
 			</div>
 			<form onSubmit={this.handleSubmit}>
         <label>

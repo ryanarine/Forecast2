@@ -9,24 +9,22 @@ import fog from './images/Fog.png';
 
 /* Styles  */
 const textStyle = {
-	fontFamily: "Arial",
 	color: "white",
 	fontWeight: 300,
 	margin: "10px",
-	fontSize: "calc(25px + 1vw)"
+	fontSize: "calc(20px + 1vw)",
+	wordWrap: "break-word"
 };
 const highText = {
-	fontFamily: "Arial",
 	color: "orange",
 	fontWeight: 200,
-	fontSize: "calc(25px + 1vw)"
+	fontSize: "calc(20px + 1vw)"
 };
 
 const lowText = {
-	fontFamily: "Arial",
 	color: "skyblue",
 	fontWeight: 200,
-	fontSize: "calc(25px + 1vw)"
+	fontSize: "calc(20px + 1vw)"
 };
 
 function getBgImg(condition) {
@@ -58,12 +56,8 @@ class WeatherCard extends React.Component {
 				{backgroundSize: "cover",
 				backgroundImage: "url(" + img + ")",
 				backgroundColor: "powderblue",
-				width: "calc(100% - 12px)",
-				float: "left",
-				height: "calc(400px + 10vw)",
 				textAlign: "center",
 				border: "4px solid black",
-				marginLeft: "6px"
 			}
 		};
 	}
