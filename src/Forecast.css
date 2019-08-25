@@ -14,6 +14,20 @@
 		margin-bottom: 0px;
 		cursor: pointer;
 		grid-column: span 2;
+		animation-name: expand;
+		animation-duration: 2.5s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-timing-function: linear;
+}
+
+#cardContainer div:hover, #backbtn:hover {
+		opacity: 0.9;
+}
+
+@keyframes expand {
+	0% {transform: scale(1.0);}
+	100% {transform: scale(0.995);}
 }
 
 @media only screen and (min-width: 1000px) {
@@ -22,12 +36,26 @@
     }
 		
 		#cardContainer div {
-				height: calc(250px + 10vw);
-				margin-bottom: 6px;
-				grid-column: span 1;
+			height: calc(250px + 10vw);
+			margin-bottom: 6px;
+			grid-column: span 1;
+			
 		}
-		
+			
 		#cardContainer #Card5 {
 				grid-column: span 1;
 		}
+}
+
+#backbtn{
+	background-color: dodgerblue;
+	border: 3px solid white;
+	border-radius: 6px;
+	color: white;
+	width: 10%;
+	padding: 1% 0%;
+	text-align: center;
+	font-size: calc(5px + 1.8vw);
+	margin: 4px 2px;
+	cursor: pointer;
 }

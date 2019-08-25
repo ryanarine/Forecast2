@@ -113,7 +113,6 @@ class DayCast extends React.Component{
 				</tbody>
 			</table>
 			</div>);
-		//}	
 	}
 }
 
