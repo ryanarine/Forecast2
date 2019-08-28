@@ -41,7 +41,7 @@ class DayCast extends React.Component{
 	
 	render(){
 			return(
-			<div>
+		<div>
 			<table align={"center"} style={{backgroundColor: "mediumaquamarine",
 			backgroundImage: "url(" + getBgImg(this.state.mainCondition) + ")",
 			backgroundSize: "cover"}}>
@@ -112,8 +112,7 @@ class DayCast extends React.Component{
 					
 				</tbody>
 			</table>
-			</div>);
-		//}	
+		</div>);
 	}
 }
 
