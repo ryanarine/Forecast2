@@ -1,11 +1,11 @@
 ﻿#cardContainer {
     display: grid;
-		grid-template-columns: calc(25% - 6px) calc(25% - 6px) calc(25% - 6px) calc(25% - 6px);
+		grid-template-columns: repeat(4, 2fr);
     padding-left: 6px;
 		grid-gap: 6px;
 }
 
-#cardContainer #Card5 {
+#cardContainer .Card:last-child {
 	grid-column: 2 / 4;
 }
 
@@ -21,7 +21,7 @@
 		animation-timing-function: linear;
 }
 
-#cardContainer div:hover, #backbtn:hover {
+#cardContainer .Card:hover, #backbtn:hover {
 		opacity: 0.9;
 }
 
@@ -30,20 +30,30 @@
 	100% {transform: scale(0.995);}
 }
 
+#mapContainer {
+	height: 70vw;
+	width: 100%;
+	margin: 10px auto 0 auto;
+}
+
 @media only screen and (min-width: 1000px) {
     #cardContainer {
-        grid-template-columns: calc(20% - 6px) calc(20% - 6px) calc(20% - 6px) calc(20% - 6px) calc(20% - 6px); 
+        grid-template-columns: repeat(5, 1fr);
     }
 		
 		#cardContainer div {
-			height: calc(250px + 10vw);
 			margin-bottom: 6px;
 			grid-column: span 1;
 			
 		}
 			
-		#cardContainer #Card5 {
-				grid-column: span 1;
+		#cardContainer .Card:last-child {
+			grid-column: span 1;
+		}
+		
+		#mapContainer {
+			height: 70vh;
+			width: 70%;
 		}
 }
 
