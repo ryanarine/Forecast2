@@ -6,7 +6,26 @@ import clear from './images/Clear.jpeg';
 import storm from './images/Thunderstorm.jpg';
 import drizzle from './images/Drizzle.jpg';
 import fog from './images/Fog.png';
-import "./WeatherCard.css";
+
+/* Styles  */
+const textStyle = {
+	color: "white",
+	fontWeight: 300,
+	margin: "10px",
+	fontSize: "calc(20px + 1vw)",
+	wordWrap: "break-word"
+};
+const highText = {
+	color: "orange",
+	fontWeight: 200,
+	fontSize: "calc(20px + 1vw)"
+};
+
+const lowText = {
+	color: "skyblue",
+	fontWeight: 200,
+	fontSize: "calc(20px + 1vw)"
+};
 
 function getBgImg(condition) {
 		if (condition === "Clear") return clear;
@@ -34,17 +53,20 @@ class WeatherCard extends React.Component {
 			low: "Low: " + props.low + "°C",
 			cond: props.condition,
 			bg: 
-				{
+				{backgroundSize: "cover",
 				backgroundImage: "url(" + img + ")",
+				backgroundColor: "powderblue",
+				textAlign: "center",
+				border: "4px solid black",
 			}
 		};
 	}
 	render(){
-		return <div className="weatherCard" style={this.state.bg}>
-		<h2 className="mainh2">{this.state.name}</h2>
-		<h2 className="mainh2">{this.state.cond}</h2>
-		<h2 className="highh2">{this.state.high}</h2>
-		<h2 className="lowh2">{this.state.low}</h2>
+		return <div style={this.state.bg}>
+		<h2 style={textStyle}>{this.state.name}</h2>
+		<h2 style={textStyle}>{this.state.cond}</h2>
+		<h2 style={highText}>{this.state.high}</h2>
+		<h2 style={lowText}>{this.state.low}</h2>
 		</div>
 	};
 }

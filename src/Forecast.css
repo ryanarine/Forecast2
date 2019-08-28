@@ -14,6 +14,7 @@
 		margin-bottom: 0px;
 		cursor: pointer;
 		grid-column: span 2;
+<<<<<<< HEAD
 		animation-name: expand;
 		animation-duration: 2.5s;
 		animation-iteration-count: infinite;
@@ -28,6 +29,8 @@
 @keyframes expand {
 	0% {transform: scale(1.0);}
 	100% {transform: scale(0.995);}
+=======
+>>>>>>> parent of 9e9550dd... style changes + animations
 }
 
 #mapContainer {
@@ -42,6 +45,7 @@
     }
 		
 		#cardContainer div {
+<<<<<<< HEAD
 			margin-bottom: 6px;
 			grid-column: span 1;
 			
@@ -54,18 +58,14 @@
 		#mapContainer {
 			height: 70vh;
 			width: 70%;
+=======
+				height: calc(250px + 10vw);
+				margin-bottom: 6px;
+				grid-column: span 1;
 		}
-}
-
-#backbtn{
-	background-color: dodgerblue;
-	border: 3px solid white;
-	border-radius: 6px;
-	color: white;
-	width: 10%;
-	padding: 1% 0%;
-	text-align: center;
-	font-size: calc(5px + 1.8vw);
-	margin: 4px 2px;
-	cursor: pointer;
+		
+		#cardContainer #Card5 {
+				grid-column: span 1;
+>>>>>>> parent of 9e9550dd... style changes + animations
+		}
 }
