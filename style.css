@@ -1,4 +1,4 @@
-h1, table, tr, td, th, label{
+h1, table, tr, td, th, label, p{
 	text-align: center;
 	color: white;
 }
@@ -6,6 +6,7 @@ h1, table, tr, td, th, label{
 h1 {
 	font-size: calc(20px + 1vw);
 	font-weight: 400;
+	margin: 0;
 }
 
 table, tr, td, th {
@@ -14,7 +15,7 @@ table, tr, td, th {
 	padding: 8px;
 	font-family: Arial;
 	font-weight: 300;
-	font-size: calc(5px + 1.8vw);
+	font-size: calc(15px + 3vh);
 }
 
 #root {
@@ -26,12 +27,15 @@ body{
 	background-color: deepskyblue;
 	background-size: cover;
 	background-repeat: repeat;
+	font-family: Arial;
+}
+
+h1, #cardContainer, label,  tbody{
 	text-shadow: #000000 0px 0px 1px,   #000000 0px 0px 1px,   #000000 0px 0px 1px,
 							 #000000 0px 0px 1px,   #000000 0px 0px 1px,   #000000 0px 0px 1px,
 							 #000000 0px 0px 1px,   #000000 0px 0px 1px,   #000000 0px 0px 1px,
 							 #000000 0px 0px 1px,   #000000 0px 0px 1px,   #000000 0px 0px 1px,
  							 #000000 0px 0px 1px,   #000000 0px 0px 1px,   #000000 0px 0px 1px;
-	font-family: Arial;
 }
 
 select, label, input{
@@ -43,5 +47,17 @@ select, input{
 	border-radius: 3px;
 	color: black;
 	margin-left: 20px;
+	cursor: pointer;
+}
+
+button{
+	background-color: dodgerblue;
+	border: 1px solid white;
+	border-radius: 6px;
+	color: white;
+	padding: 15px 20px;
+	text-align: center;
+	font-size: calc(10px + 1vw);
+	margin: 4px 2px;
 	cursor: pointer;
 }

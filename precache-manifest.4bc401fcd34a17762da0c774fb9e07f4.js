@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6030380942a50ea9159bef8789c256c7",
+    "revision": "6ad0cad7ff421ba59583e12c34aa864f",
     "url": "/Forecast/index.html"
   },
   {
-    "revision": "b892b8cf12e98f7de7b9",
-    "url": "/Forecast/static/css/main.3b47a2a4.chunk.css"
+    "revision": "b8fcfd4306620ad16f7a",
+    "url": "/Forecast/static/css/main.d9706c10.chunk.css"
   },
   {
-    "revision": "0b013cf572687ae9d606",
-    "url": "/Forecast/static/js/2.b69b4d30.chunk.js"
+    "revision": "c93214a9c642ddb5ccfc",
+    "url": "/Forecast/static/js/2.aa7610bd.chunk.js"
   },
   {
-    "revision": "b892b8cf12e98f7de7b9",
-    "url": "/Forecast/static/js/main.ef2e360c.chunk.js"
+    "revision": "b8fcfd4306620ad16f7a",
+    "url": "/Forecast/static/js/main.baf0d9e9.chunk.js"
   },
   {
-    "revision": "f32d3b2de39206c3993d",
-    "url": "/Forecast/static/js/runtime~main.bf801d13.js"
+    "revision": "64ab90d9eb0125823635",
+    "url": "/Forecast/static/js/runtime~main.c06db94f.js"
   },
   {
     "revision": "122dd7e989d20c4d01507e9e6fc5d1a4",
