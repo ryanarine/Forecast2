@@ -13,7 +13,7 @@ is ignored
 */
 
 // Get the name of the city and return header string
-function getCityName(data) {
+function getCityHeader(data) {
 	let name = data.city.name;
 	if (name){
 		return name + "'s Forecast";
@@ -114,18 +114,17 @@ function getHourly(arr, starts){
 // Get all the relevant data
 async function getEverything(url){
 	var response = await fetch(url);
-		if (response.status === 429){return -1;} //Too many requests
+		if (response.status === 429){return -1;} // Too many requests
 		var forecast =  await response.json();
 		var starts = getStarts(forecast.list);
 		var info = {};
-		info.city = getCityName(forecast);
+		info.header = getCityHeader(forecast);
 		info.days = getDays(forecast);
 		var highLows = getHighLows(forecast, starts);
 		var hourlyData = getHourly(forecast.list, starts);
 		info.conditions = getConditions(hourlyData.conds, starts);
 		info.highs = highLows.highs;
 		info.lows = highLows.lows;
-		info.starts = starts;
 		info.hourly  = hourlyData.temps;
 		info.hourlyConditions = hourlyData.conds;
 		info.descriptions = hourlyData.descs;

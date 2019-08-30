@@ -30,15 +30,14 @@
 	100% {transform: scale(0.995);}
 }
 
-#backbtn {
-	background-color: dodgerblue;
+.cardButton {
 	border: 1px solid white;
 	border-radius: 6px;
 	color: white;
 	padding: 1vw;
 	text-align: center;
 	font-size: calc(5px + 1.8vw);
-	margin: 4px 2px;
+	margin: 4px 10px;
 	cursor: pointer;
 }
 

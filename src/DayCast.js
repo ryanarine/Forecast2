@@ -1,119 +1,33 @@
 import React from 'react';
-import rainy from './images/Rainy.png';
-import snowy from './images/Snowy.png';
-import cloudy from './images/cloudy.jpg';
-import clear from './images/Clear.jpeg';
-import storm from './images/Thunderstorm.jpg';
-import drizzle from './images/Drizzle.jpg';
-import fog from './images/Fog.png';
+import getBgImg from './Images';
 
-function getBgImg(condition) {
-		if (condition === "Clear") return clear;
-		if (condition === "Clouds") return cloudy;
-		if (condition === "Rain") return rainy;
-		if (condition === "Snow") return snowy;
-		if (condition === "Thunderstorm") return storm;
-		if (condition === "Drizzle") return drizzle;
-		return fog;
-	}
+function DayCast(props) {
+	const style = {backgroundColor: "mediumaquamarine",
+	backgroundImage: "url(" + getBgImg(props.mainCondition) + ")",
+	backgroundSize: "cover"}
 
-class DayCast extends React.Component{
-	constructor(props){
-		super(props);
-		this.state = {
-			values: 0,
-			day: "",
-			start: 0,
-			conditions: 0,
-			descriptions: 0,
-			img: 0
-		}
-	}
-	
-	static getDerivedStateFromProps(props,state){
-		return ({day: props.day,
-		values: props.values,
-		start: props.start,
-		conditions: props.conditions,
-		descriptions: props.descriptions,
-		mainCondition: props.mainCondition});
-	}
-	
-	render(){
-			return(
-		<div>
-			<table align={"center"} style={{backgroundColor: "mediumaquamarine",
-			backgroundImage: "url(" + getBgImg(this.state.mainCondition) + ")",
-			backgroundSize: "cover"}}>
-				<tbody>
-					<tr><th colSpan="4">{this.state.day}</th></tr>
-					<tr>
-					<th>{"Time"}</th>
-					<th>{"Temperature"}</th>
-					<th>{"Condition"}</th>
-					<th>{"Description"}</th>
-					</tr>
-					
-					<tr>
-					<td>{"12 AM"}</td>
-					<td>{this.state.values[this.state.start]}</td>
-					<td>{this.state.conditions[this.state.start]}</td>
-					<td>{this.state.descriptions[this.state.start]}</td>
-					</tr>
-	
-					<tr>
-					<td>{"3 AM"}</td>
-					<td>{this.state.values[this.state.start+1]}</td>
-					<td>{this.state.conditions[this.state.start+1]}</td>
-					<td>{this.state.descriptions[this.state.start+1]}</td>
-					</tr>
-									
-					<tr>
-					<td>{"6 AM"}</td>
-					<td>{this.state.values[this.state.start+2]}</td>
-					<td>{this.state.conditions[this.state.start+2]}</td>
-					<td>{this.state.descriptions[this.state.start+2]}</td>
-					</tr>
-										
-					<tr>
-					<td>{"9 AM"}</td>
-					<td>{this.state.values[this.state.start+3]}</td>
-					<td>{this.state.conditions[this.state.start+3]}</td>
-					<td>{this.state.descriptions[this.state.start+3]}</td>
-					</tr>
-										
-					<tr>
-					<td>{"12 PM"}</td>
-					<td>{this.state.values[this.state.start+4]}</td>
-					<td>{this.state.conditions[this.state.start+4]}</td>
-					<td>{this.state.descriptions[this.state.start+4]}</td>
-					</tr>
-					
-					<tr>
-					<td>{"3 PM"}</td>
-					<td>{this.state.values[this.state.start+5]}</td>
-					<td>{this.state.conditions[this.state.start+5]}</td>
-					<td>{this.state.descriptions[this.state.start+5]}</td>
-					</tr>
-					
-					<tr>
-					<td>{"6 PM"}</td>
-					<td>{this.state.values[this.state.start+6]}</td>
-					<td>{this.state.conditions[this.state.start+6]}</td>
-					<td>{this.state.descriptions[this.state.start+6]}</td>
-					</tr>
-					
-					<tr>
-					<td>{"9 PM"}</td>
-					<td>{this.state.values[this.state.start+7]}</td>
-					<td>{this.state.conditions[this.state.start+7]}</td>
-					<td>{this.state.descriptions[this.state.start+7]}</td>
-					</tr>
-					
-				</tbody>
-			</table>
-		</div>);
-	}
+	const timeSlots = ["12 AM", "3 AM", "6 AM", "9 AM", "12 PM", "3 PM", "6 PM", "9 PM"];
+	const tableEntries = [0,1,2,3,4,5,6,7].map(i => 
+		<tr key={i}>
+			<td>{timeSlots[i]}</td>
+			<td>{props.values[props.start + i]}</td>
+			<td>{props.conditions[props.start + i]}</td>
+			<td>{props.descriptions[props.start + i]}</td>
+		</tr>
+	);
+
+	return(<table align={"center"} style={style}>
+		<tbody>
+			<tr><th colSpan="4">{props.day}</th></tr>
+			<tr>
+			<th>{"Time"}</th>
+			<th>{"Temperature"}</th>
+			<th>{"Condition"}</th>
+			<th>{"Description"}</th>
+			</tr>		
+			{tableEntries}
+		</tbody>
+	</table>);
 }
 
 export default DayCast
