@@ -5,8 +5,7 @@ function DayCast(props) {
   const style = {
     backgroundColor: "mediumaquamarine",
     backgroundImage: "url(" + getBgImg(props.mainCondition) + ")",
-    backgroundSize: "cover",
-    borderRadius: "4%"
+    backgroundSize: "cover"
   };
 
   const timeSlots = ["12 AM", "3 AM", "6 AM", "9 AM", "12 PM", "3 PM", "6 PM", "9 PM"];
