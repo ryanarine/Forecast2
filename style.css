@@ -4,7 +4,7 @@ h1, table, tr, td, th, label, p{
 }
 
 h1 {
-	font-size: calc(20px + 1vw);
+	font-size: calc(15px + 1vw);
 	font-weight: 400;
 	margin: 0;
 }
@@ -39,7 +39,7 @@ h1, #cardContainer, label,  tbody{
 }
 
 select, label, input{
-	font-size: calc(10px + 1vw);
+	font-size: calc(10px + 0.8vw);
 }
 select, input{
 	background-color: honeydew;
