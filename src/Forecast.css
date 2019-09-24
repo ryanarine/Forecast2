@@ -1,76 +1,79 @@
 ﻿#cardContainer {
-    display: grid;
-		grid-template-columns: repeat(4, 2fr);
-    padding-left: 6px;
-		grid-gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  padding-bottom: 20px;
+  grid-gap: 6px;
 }
 
 #cardContainer .Card:last-child {
-	grid-column: 2 / 4;
+  grid-column: 2 / 4;
 }
 
 #cardContainer div {
-		height: content;
-		margin-bottom: 0px;
-		cursor: pointer;
-		grid-column: span 2;
-		animation-name: expand;
-		animation-duration: 2.5s;
-		animation-iteration-count: infinite;
-		animation-direction: alternate;
-		animation-timing-function: linear;
+  height: content;
+  margin-bottom: 0px;
+  cursor: pointer;
+  grid-column: span 2;
 }
 
-#cardContainer .Card:hover, #backbtn:hover {
-		opacity: 0.9;
+#cardContainer .Card:hover,
+.cardButton:hover {
+  opacity: 0.7;
 }
 
-@keyframes expand {
-	0% {transform: scale(1.0);}
-	100% {transform: scale(0.995);}
+#prevbtn {
+  background-color: red;
+  background-image: linear-gradient(to bottom right, red, darkred);
+}
+#backbtn {
+  background-color: dodgerblue;
+  background-image: linear-gradient(to bottom right, blue, darkblue);
+}
+#nextbtn {
+  background-color: forestgreen;
+  background-image: linear-gradient(to bottom right, forestgreen, darkgreen);
 }
 
 .cardButton {
-	border: 1px solid white;
-	border-radius: 6px;
-	color: white;
-	padding: 1vw;
-	text-align: center;
-	font-size: calc(5px + 1.8vw);
-	margin: 4px 10px;
-	cursor: pointer;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  padding: 0.7vw;
+  text-align: center;
+  font-size: calc(5px + 1.4vw);
+  margin: 4px 10px;
+  cursor: pointer;
+  outline: none;
 }
 
 #mapContainer {
-	height: 70vw;
-	width: 100%;
-	margin: 10px auto 0 auto;
+  height: 35vh;
+  width: 100%;
+  margin: 10px auto 0 auto;
 }
 
-@media only screen and (min-width: 1000px) {
-    #cardContainer {
-        grid-template-columns: repeat(5, 1fr);
-    }
-		
-		#cardContainer div {
-			margin-bottom: 6px;
-			grid-column: span 1;
-			
-		}
-			
-		#cardContainer .Card:last-child {
-			grid-column: span 1;
-		}
-		
-		#mapContainer {
-			height: 70vh;
-			width: 70%;
-			height: calc(250px + 10vw);
-			margin-bottom: 6px;
-			grid-column: span 1;
-		}
-		
-		#cardContainer #Card5 {
-				grid-column: span 1;
-		}
+@media only screen and (min-width: 850px) {
+  #cardContainer {
+    grid-template-columns: repeat(5, 1fr);
+    padding-bottom: 0;
+  }
+
+  #cardContainer div {
+    margin-bottom: 6px;
+    grid-column: span 1;
+  }
+
+  #cardContainer .Card:last-child {
+    grid-column: span 1;
+  }
+
+  #mapContainer {
+    width: 70%;
+    margin-bottom: 6px;
+    grid-column: span 1;
+  }
+
+  #cardContainer #Card5 {
+    grid-column: span 1;
+  }
 }

@@ -1,34 +1,40 @@
-.weatherCard{
-	background-size: cover;
-	background-color: powderblue;
-	text-align: center;
-	border: 4px solid black;
+.weatherCard {
+  background-size: cover;
+  background-color: powderblue;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 5%;
+  box-shadow: 5px 5px 10px black;
 }
 
-.mainh2, .highh2, .lowh2 {
-	font-size: calc(5vw);
+.mainh2,
+.highh2,
+.lowh2 {
+  font-size: calc(8px + 2vw);
 }
 
-.mainh2{
-	color: white;
-	font-weight: 300;
-	margin: 10px;
-	
-	word-wrap: break-word;
+.mainh2 {
+  color: white;
+  font-weight: 300;
+  margin: 10px;
+
+  word-wrap: break-word;
 }
 
-.highh2{
-	color: orange;
-	font-weight: 200;
+.highh2 {
+  color: orange;
+  font-weight: 200;
 }
 
-.lowh2{
-	color: skyblue;
-	font-weight: 200;
+.lowh2 {
+  color: skyblue;
+  font-weight: 200;
 }
 
-@media only screen and (min-width: 1000px) {
-	.mainh2, .highh2, .lowh2 {
-		font-size: calc(15px + 1vw);
-	}
+@media only screen and (min-width: 850px) {
+  .mainh2,
+  .highh2,
+  .lowh2 {
+    font-size: calc(15px + 1vw);
+  }
 }
