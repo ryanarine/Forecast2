@@ -26,10 +26,6 @@ const codes = {
 
 var url = "https://api.openweathermap.org/data/2.5/forecast?id=6167865&appid=" + key;
 
-const daycastStyle = {
-  minWidth: "500px + 3vh"
-};
-
 /* Helper Functions */
 function changeURLByCity(city) {
   let newurl = "https://api.openweathermap.org/data/2.5/forecast?id=" + codes[city] + "&appid=" + key;
@@ -64,6 +60,9 @@ class Forecast extends React.Component {
       hourly: [], // temperatures for each 3-hour time period
       hourlyConditions: [], // conditions for each 3-hour time period
       descriptions: [], // descriptions of the conditions for each 3-hour time period
+      humidities: [], // humidity percentage for each 3-hour time period
+      cloudiness: [], // percentage of clouds for each 3-hour time period
+      windSpeeds: [], // wind speed for each 3-hour time period
       dayIndex: -1 // index of which weather card is currently being focused on
       // -1 means no weather card is being focused on i.e main forecast is displayed
     };
@@ -105,13 +104,16 @@ class Forecast extends React.Component {
     // render detailed forecast for single day
     if (this.state.dayIndex !== -1) {
       return (
-        <div style={daycastStyle}>
+        <div style={{ width: "fit-content", margin: "auto" }}>
           <DayCast
             day={this.state.days[this.state.dayIndex]}
             values={this.state.hourly}
             start={this.state.dayIndex * 8}
             conditions={this.state.hourlyConditions}
             descriptions={this.state.descriptions}
+            humidities={this.state.humidities}
+            cloudiness={this.state.cloudiness}
+            windSpeeds={this.state.windSpeeds}
             mainCondition={this.state.conditions[this.state.dayIndex]}
           />
           <button id="prevbtn" className="cardButton" onClick={() => this.dayFocus((this.state.dayIndex + 4) % 5)}>

@@ -1,16 +1,12 @@
-/* Container for the 5 weather cards */
+﻿/* Container for the 5 weather cards */
 #cardContainer {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (2fr)[4];
-      grid-template-columns: repeat(4, 2fr);
+  grid-template-columns: repeat(4, 2fr);
   padding-bottom: 20px;
   grid-gap: 6px;
 }
 
 #cardContainer .Card:last-child {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-column: 2 / 4;
 }
 
@@ -28,8 +24,7 @@
 
 /* Table inside DayCast component  */
 table {
-  -webkit-box-shadow: 10px 10px 20px black;
-          box-shadow: 10px 10px 20px black;
+  box-shadow: 10px 10px 20px black;
   border: none;
   border-radius: calc(5px + 1vw);
   overflow: auto;
@@ -71,19 +66,14 @@ tr:last-child td {
 
 #prevbtn {
   background-color: red;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(red), to(darkred));
   background-image: linear-gradient(to bottom right, red, darkred);
 }
-
 #backbtn {
   background-color: dodgerblue;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(blue), to(darkblue));
   background-image: linear-gradient(to bottom right, blue, darkblue);
 }
-
 #nextbtn {
   background-color: forestgreen;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(forestgreen), to(darkgreen));
   background-image: linear-gradient(to bottom right, forestgreen, darkgreen);
 }
 
@@ -97,24 +87,26 @@ tr:last-child td {
 /* Media Queries */
 @media only screen and (min-width: 850px) {
   #cardContainer {
-    -ms-grid-columns: (1fr)[5];
-        grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     padding-bottom: 0;
   }
+
   #cardContainer div {
     margin-bottom: 6px;
     grid-column: span 1;
   }
+
   #cardContainer .Card:last-child {
     grid-column: span 1;
   }
+
   #mapContainer {
     width: 70%;
     margin-bottom: 6px;
     grid-column: span 1;
   }
+
   #cardContainer #Card5 {
     grid-column: span 1;
   }
 }
-/*# sourceMappingURL=Forecast.css.map */
