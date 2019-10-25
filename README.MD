@@ -4,6 +4,4 @@ The default city is set to Toronto and you can quickly get the forecast for 10 o
 
 Alternatively, you can click on the map provided and obtain the forecast at the location that was clicked.
 
-You can view this application [here](https://ryanarine.github.io/Forecast/) <br>
-
-You can view the repo for the optimized build [on this branch](https://github.com/ryanarine/Forecast/tree/gh-pages)
+You can view this application [here](https://ryanarine.github.io/Forecast/)
