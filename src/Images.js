@@ -15,6 +15,16 @@ import fog from "./images/Fog.webp";
 import fogjpg from "./images/Fog.jpg";
 import "./WeatherCard.css";
 
+function canUseWebP() {
+  var e = document.createElement("canvas");
+  if (!!(e.getContext && e.getContext("2d"))) {
+    return e.toDataURL("image/webp").indexOf("data:image/webp") == 0;
+  }
+  return false;
+}
+
+const webp = canUseWebP();
+
 const map = {
   Rain: rainy,
   Snow: snowy,
@@ -32,9 +42,9 @@ const map = {
 
 function getBgImg(condition) {
   if (map[condition]) {
-    return window.createImageBitmap ? map[condition] : map[condition + "jpg"];
+    return webp ? map[condition] : map[condition + "jpg"];
   }
-  return window.createImageBitmap ? fog : fogjpg;
+  return webp ? fog : fogjpg;
 }
 
 export default getBgImg;
