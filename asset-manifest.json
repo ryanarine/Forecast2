@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "/Forecast/static/css/main.31722ea7.chunk.css",
-    "main.js": "/Forecast/static/js/main.9722a162.chunk.js",
-    "main.js.map": "/Forecast/static/js/main.9722a162.chunk.js.map",
+    "main.css": "/Forecast/static/css/main.e9c86481.chunk.css",
+    "main.js": "/Forecast/static/js/main.91209ed9.chunk.js",
+    "main.js.map": "/Forecast/static/js/main.91209ed9.chunk.js.map",
     "runtime~main.js": "/Forecast/static/js/runtime~main.c06db94f.js",
     "runtime~main.js.map": "/Forecast/static/js/runtime~main.c06db94f.js.map",
-    "static/js/2.4f03e8e3.chunk.js": "/Forecast/static/js/2.4f03e8e3.chunk.js",
-    "static/js/2.4f03e8e3.chunk.js.map": "/Forecast/static/js/2.4f03e8e3.chunk.js.map",
+    "static/js/2.80ff4d3c.chunk.js": "/Forecast/static/js/2.80ff4d3c.chunk.js",
+    "static/js/2.80ff4d3c.chunk.js.map": "/Forecast/static/js/2.80ff4d3c.chunk.js.map",
     "index.html": "/Forecast/index.html",
-    "precache-manifest.b6fba8b542d338e729e4135268d2ed6d.js": "/Forecast/precache-manifest.b6fba8b542d338e729e4135268d2ed6d.js",
+    "precache-manifest.6657bc776befb02c3e2f9c5ea05d5508.js": "/Forecast/precache-manifest.6657bc776befb02c3e2f9c5ea05d5508.js",
     "service-worker.js": "/Forecast/service-worker.js",
-    "static/css/main.31722ea7.chunk.css.map": "/Forecast/static/css/main.31722ea7.chunk.css.map",
+    "static/css/main.e9c86481.chunk.css.map": "/Forecast/static/css/main.e9c86481.chunk.css.map",
     "static/media/Clear.jpg": "/Forecast/static/media/Clear.00892c85.jpg",
+    "static/media/Clear.webp": "/Forecast/static/media/Clear.48100543.webp",
     "static/media/Cloudy.jpg": "/Forecast/static/media/Cloudy.7b0d2d01.jpg",
+    "static/media/Cloudy.webp": "/Forecast/static/media/Cloudy.d19659ab.webp",
+    "static/media/Drizzle.webp": "/Forecast/static/media/Drizzle.73168f5d.webp",
     "static/media/Drizzle.jpg": "/Forecast/static/media/Drizzle.90fc98b5.jpg",
+    "static/media/Fog.webp": "/Forecast/static/media/Fog.61ac5181.webp",
     "static/media/Fog.jpg": "/Forecast/static/media/Fog.e55044d6.jpg",
     "static/media/Rainy.jpg": "/Forecast/static/media/Rainy.869ecddf.jpg",
+    "static/media/Rainy.webp": "/Forecast/static/media/Rainy.9247b5c6.webp",
     "static/media/Snowy.jpg": "/Forecast/static/media/Snowy.753bb223.jpg",
-    "static/media/Thunderstorm.jpg": "/Forecast/static/media/Thunderstorm.17776440.jpg"
+    "static/media/Snowy.webp": "/Forecast/static/media/Snowy.c02d2d39.webp",
+    "static/media/Thunderstorm.jpg": "/Forecast/static/media/Thunderstorm.17776440.jpg",
+    "static/media/Thunderstorm.webp": "/Forecast/static/media/Thunderstorm.1cef7ab2.webp"
   }
 }
