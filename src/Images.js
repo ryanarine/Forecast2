@@ -18,7 +18,7 @@ import "./WeatherCard.css";
 function canUseWebP() {
   var e = document.createElement("canvas");
   if (!!(e.getContext && e.getContext("2d"))) {
-    return e.toDataURL("image/webp").indexOf("data:image/webp") == 0;
+    return e.toDataURL("image/webp").indexOf("data:image/webp") === 0;
   }
   return false;
 }
