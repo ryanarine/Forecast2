@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23fac654563bc54dee950aa420a146b3",
+    "revision": "4d75e5d4a85f640e60abbb941ccbe4d1",
     "url": "/Forecast/index.html"
   },
   {
-    "revision": "fa383e615e130d20a3c6",
+    "revision": "5035329abaf196641446",
     "url": "/Forecast/static/css/main.e9c86481.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Forecast/static/js/2.80ff4d3c.chunk.js"
   },
   {
-    "revision": "fa383e615e130d20a3c6",
-    "url": "/Forecast/static/js/main.91209ed9.chunk.js"
+    "revision": "5035329abaf196641446",
+    "url": "/Forecast/static/js/main.66688443.chunk.js"
   },
   {
     "revision": "64ab90d9eb0125823635",
