@@ -9,14 +9,16 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Forecast</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://api.openweathermap.org" />
+    <link rel="preconnect" href="https://api.openweathermap.org" crossorigin="crossorigin" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
       const hour = new Date().getHours();
-      if (hour >= 20 || hour <= 6) document.body.style.backgroundImage = "url('./night.jpg')";
+      if (hour >= 20 || hour <= 6) {
+        document.body.style.backgroundImage = window.createImageBitmap ? "url('./night.webp')" : "url('./night.jpg')";
+      }
     </script>
   </body>
 </html>
