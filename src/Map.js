@@ -36,19 +36,20 @@ class Map extends Component {
 
   render() {
     return (
-      <div id="mapContainer">
-        <label>Or click on the map to see the forecast there</label> <br></br>
+      <React.Fragment>
+        <label>Click on the map to see the forecast there</label> <br></br>
         <label>
           Latitude: {this.state.lat} Longitude: {this.state.lon}
         </label>
         <br></br>
         <input type="submit" value="Submit Coordinates" onClick={this.handleSubmit} />
-      </div>
+        <div id="map"></div>
+      </React.Fragment>
     );
   }
 
   componentDidMount() {
-    this.map.setTarget("mapContainer");
+    this.map.setTarget("map");
     this.map.on("click", e => {
       let center = toLonLat(e.coordinate);
       this.setState({ lon: center[0], lat: center[1] });

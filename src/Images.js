@@ -13,7 +13,6 @@ import drizzle from "./images/Drizzle.webp";
 import drizzlejpg from "./images/Drizzle.jpg";
 import fog from "./images/Fog.webp";
 import fogjpg from "./images/Fog.jpg";
-import "./WeatherCard.css";
 
 function canUseWebP() {
   var e = document.createElement("canvas");

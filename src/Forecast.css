@@ -1,11 +1,50 @@
+h1,
+table,
+tr,
+td,
+th,
+label,
+input,
+p {
+  color: white;
+}
+
+h1 {
+  font-size: calc(15px + 1vw);
+  font-weight: 400;
+  margin: 0;
+}
+
+h1,
+#cardContainer,
+.cardButton,
+label,
+tbody,
+input {
+  text-shadow: #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px, #000000 0px 0px 1px;
+}
+
+label,
+input {
+  font-size: calc(10px + 0.8vw);
+}
+
+input {
+  background-color: #ffa500;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* Container for the 5 weather cards */
 #cardContainer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (2fr)[4];
       grid-template-columns: repeat(4, 2fr);
-  padding-bottom: 20px;
   grid-gap: 6px;
+  margin-bottom: 5px;
+  /* The cards themselves */
 }
 
 #cardContainer .Card:last-child {
@@ -16,11 +55,11 @@
 
 #cardContainer div {
   height: content;
-  margin-bottom: 0px;
   cursor: pointer;
   grid-column: span 2;
 }
 
+/* Button animatons */
 .Card,
 .cardButton,
 input[type="submit"] {
@@ -39,7 +78,53 @@ input[type="submit"]:hover {
           transform: scale(1);
 }
 
+/* The contents of the cards */
+.weatherCard {
+  background-size: cover;
+  background-color: powderblue;
+  text-align: center;
+  padding: 3px;
+  border-radius: 5%;
+  -webkit-box-shadow: 0px 0px 3px 3px black;
+          box-shadow: 0px 0px 3px 3px black;
+}
+
+.mainh2,
+.highh2,
+.lowh2 {
+  font-size: calc(8px + 2vw);
+}
+
+.mainh2 {
+  color: white;
+  font-weight: 300;
+  margin: 10px;
+  word-wrap: break-word;
+}
+
+.highh2 {
+  color: orange;
+  font-weight: 200;
+}
+
+.lowh2 {
+  color: skyblue;
+  font-weight: 200;
+}
+
 /* Table inside DayCast component  */
+table,
+tr,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 8px calc(2px + 1vw);
+  font-family: Arial;
+  font-weight: 300;
+  font-size: calc(5px + 1.8vw);
+}
+
 table {
   -webkit-box-shadow: 0px 0px 3px 4px black;
           box-shadow: 0px 0px 3px 4px black;
@@ -71,11 +156,10 @@ tr:last-child td {
 }
 
 .cardButton {
-  border: 1px solid white;
+  border: 3px solid black;
   border-radius: calc(5px + 1vw);
   color: white;
   padding: calc(5px + 0.5vw);
-  text-align: center;
   font-size: calc(10px + 1vw);
   margin: 4px 10px;
   cursor: pointer;
@@ -101,14 +185,15 @@ tr:last-child td {
 }
 
 /* Map */
-#mapContainer {
+#map {
   height: 35vh;
   width: 100%;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 30px auto;
 }
 
-#mapContainer input {
+#map input {
   margin-bottom: 10px;
+  padding: 5px;
 }
 
 /* Media Queries */
@@ -119,19 +204,19 @@ tr:last-child td {
     padding-bottom: 0;
   }
   #cardContainer div {
-    margin-bottom: 6px;
     grid-column: span 1;
   }
   #cardContainer .Card:last-child {
     grid-column: span 1;
   }
-  #mapContainer {
+  #map {
     width: 70%;
-    margin-bottom: 6px;
-    grid-column: span 1;
+    height: 45vh;
   }
-  #cardContainer #Card5 {
-    grid-column: span 1;
+  .mainh2,
+  .highh2,
+  .lowh2 {
+    font-size: calc(15px + 1vw);
   }
 }
 /*# sourceMappingURL=Forecast.css.map */

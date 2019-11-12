@@ -4,41 +4,15 @@ import DayCast from "./DayCast";
 import "./Forecast.css";
 import Map from "./Map";
 import getEverything from "./Data";
-import CitySelectBox from "./CitySelectBox";
 
 /* Global variables */
 const key = "54a84a123d401ac68736a6bca89f4301";
-const citySelectName = "box"; // name of select tag  in CitySelectBox component
-
-const codes = {
-  toronto: "6167865",
-  brampton: "5907364",
-  mississauga: "6075357",
-  richmondhill: "6122091",
-  kitchener: "5992996",
-  waterloo: "6176823",
-  markham: "6066513",
-  ottawa: "6094817",
-  hamilton: "5969782",
-  vaughan: "6173577",
-  oshawa: "6094578"
-};
 
 var url = "https://api.openweathermap.org/data/2.5/forecast?id=6167865&appid=" + key;
 
-/* Helper Functions */
-function changeURLByCity(city) {
-  let newurl = "https://api.openweathermap.org/data/2.5/forecast?id=" + codes[city] + "&appid=" + key;
-  return changeURL(newurl);
-}
-
-function changeURLByCoords(lat, lon) {
-  let newurl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + key;
-  return changeURL(newurl);
-}
-
 // return whether or not url changed
-function changeURL(newurl) {
+function changeURL(lat, lon) {
+  let newurl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + key;
   if (newurl === url) {
     return false;
   }
@@ -67,21 +41,12 @@ class Forecast extends React.Component {
       // -1 means no weather card is being focused on i.e main forecast is displayed
     };
     this.handleMapSubmit = this.handleMapSubmit.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.dayFocus = this.dayFocus.bind(this);
   }
 
   // Executes when coordinates are submitted
   handleMapSubmit(lat, lon) {
-    if (changeURLByCoords(lat, lon)) {
-      this.componentDidMount();
-    }
-  }
-
-  // Executes when one of the given Ontario cities are submitted
-  handleSubmit(event) {
-    event.preventDefault();
-    if (changeURLByCity(event.target.elements[citySelectName].value)) {
+    if (changeURL(lat, lon)) {
       this.componentDidMount();
     }
   }
@@ -143,17 +108,7 @@ class Forecast extends React.Component {
       return (
         <div>
           <h1>{this.state.header}</h1>
-
           <div id="cardContainer">{cards}</div>
-
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Choose a city to display its forecast <br></br>
-              <CitySelectBox name={citySelectName} />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
-
           <Map submit={this.handleMapSubmit} />
         </div>
       );
