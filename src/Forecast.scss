@@ -17,14 +17,19 @@
   grid-column: span 2;
 }
 
-#cardContainer .Card:hover,
-.cardButton:hover {
-  opacity: 0.7;
+.Card,
+.cardButton,
+input[type="submit"] {
+  transform: scale(0.95);
+  transition: transform 0.2s linear;
+  &:hover {
+    transform: scale(1);
+  }
 }
 
 /* Table inside DayCast component  */
 table {
-  box-shadow: 10px 10px 20px black;
+  box-shadow: 0px 0px 3px 4px black;
   border: none;
   border-radius: calc(5px + 1vw);
   overflow: auto;
@@ -77,11 +82,15 @@ tr:last-child td {
   background-image: linear-gradient(to bottom right, forestgreen, darkgreen);
 }
 
-/* Google Map */
+/* Map */
 #mapContainer {
   height: 35vh;
   width: 100%;
   margin: 10px auto 0 auto;
+
+  input {
+    margin-bottom: 10px;
+  }
 }
 
 /* Media Queries */

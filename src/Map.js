@@ -1,28 +1,37 @@
 import React, { Component } from "react";
-import GoogleMap from "google-map-react";
+import OlMap from "ol/Map";
+import OlView from "ol/View";
+import OlLayerTile from "ol/layer/Tile";
+import OlSourceOSM from "ol/source/OSM";
+import { toLonLat, fromLonLat } from "ol/proj";
 
-const mapkey = "AIzaSyA5XxXKw44uRve7wAs046c_jGmKNhK6B1Y";
 var startingLat = 43.59;
-var startingLng = -79.7;
+var startingLon = -79.7;
 var startingZoom = 8;
 var prevLat = startingLat;
-var prevLng = startingLng;
-var prevZoom = startingZoom;
+var prevLon = startingLon;
 
 class Map extends Component {
   constructor() {
     super();
-    this.state = { lat: startingLat, lng: startingLng };
-    this.handleClick = this.handleClick.bind(this);
+    this.state = { lat: prevLat, lon: prevLon };
+    this.map = new OlMap({
+      target: null,
+      layers: [
+        new OlLayerTile({
+          source: new OlSourceOSM()
+        })
+      ],
+      view: new OlView({
+        center: fromLonLat([startingLon, startingLat]),
+        zoom: [startingZoom]
+      })
+    });
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleClick(e) {
-    this.setState({ lat: e.lat, lng: e.lng });
-  }
-
   handleSubmit() {
-    this.props.submit(this.state.lat, this.state.lng);
+    this.props.submit(this.state.lat, this.state.lon);
   }
 
   render() {
@@ -30,30 +39,27 @@ class Map extends Component {
       <div id="mapContainer">
         <label>Or click on the map to see the forecast there</label> <br></br>
         <label>
-          Latitude: {this.state.lat} Longitude: {this.state.lng}
+          Latitude: {this.state.lat} Longitude: {this.state.lon}
         </label>
         <br></br>
         <input type="submit" value="Submit Coordinates" onClick={this.handleSubmit} />
-        <GoogleMap
-          bootstrapURLKeys={{ key: mapkey }}
-          defaultCenter={{ lat: startingLat, lng: startingLng }}
-          defaultZoom={startingZoom}
-          onClick={e => this.setState({ lat: e.lat, lng: e.lng })}
-          onChange={map => {
-            prevLat = map.center.lat;
-            prevLng = map.center.lng;
-            prevZoom = map.zoom;
-          }}
-        ></GoogleMap>
       </div>
     );
   }
 
+  componentDidMount() {
+    this.map.setTarget("mapContainer");
+    this.map.on("click", e => {
+      let center = toLonLat(e.coordinate);
+      this.setState({ lon: center[0], lat: center[1] });
+    });
+  }
+
   // Change started configuration to the previous configuration
   componentWillUnmount() {
-    startingLat = prevLat;
-    startingLng = prevLng;
-    startingZoom = prevZoom;
+    [startingLon, startingLat] = toLonLat(this.map.getView().getCenter());
+    startingZoom = this.map.getView().getZoom();
+    [prevLon, prevLat] = [this.state.lon, this.state.lat];
   }
 }
 
