@@ -123,3 +123,4 @@ class Forecast extends React.Component {
 }
 
 export default Forecast;
+//TODO: Squash background images using your image editor
